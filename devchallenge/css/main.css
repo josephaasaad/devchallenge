@@ -1,0 +1,16 @@
+body {
+  background: #222;
+}
+.container {
+  background: white;
+  padding: 20px;
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    margin-bottom: 2rem !important;
+  }
+  .container {
+    border-radius: 5px;
+  }
+}
