@@ -22,7 +22,7 @@ function dbConnect($sql){
         return $queryResults;
     }
     else {
-        echo "Error getting record: " . mysqli_error($conn); 
+        //echo "Error getting record: " . mysqli_error($conn); 
         $conn->close();
     }
     

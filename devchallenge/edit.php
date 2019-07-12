@@ -42,12 +42,12 @@
       <input hidden name="id" value="<?php echo $id; ?>"/>
       <div class="form-group">
         <label for="title">Title</label>
-        <input class="form-control" name="title" id="title" placeholder="Title"  value="<?php echo $blogPart[$id]["Title"]; ?>" />
+        <input class="form-control" name="title" id="title" placeholder="Title"  value="<?php echo $blogPart[0]["Title"]; ?>" />
       </div>
       <div class="form-group">
         <label for="author">Author</label>
         <select class="form-control" name="author" id="author">
-          <option selected hidden><?php echo $blogPart[$id]["Author"]; ?></option>
+          <option selected hidden><?php echo $blogPart[0]["Author"]; ?></option>
           <option>John Doe</option>
           <option>Joshua Mcdonald</option>
           <option>Sasha May</option>
@@ -56,11 +56,11 @@
       </div>
       <div class="form-group">
         <label for="preview_text">Preview Text</label>
-        <textarea style="white-space: pre-line" class="form-control" name="preview_text" id="preview_text" rows="3" placeholder="Preview Text"><?php echo $blogPart[$id]["PreviewText"]; ?></textarea>
+        <textarea style="white-space: pre-line" class="form-control" name="preview_text" id="preview_text" rows="3" placeholder="Preview Text"><?php echo $blogPart[0]["PreviewText"]; ?></textarea>
       </div>
       <div class="form-group">
         <label for="body">Body</label>
-        <textarea style="white-space: pre-line" class="form-control" name="body" id="body" rows="10" placeholder="Body"><?php echo $blogPart[$id]["Body"]; ?></textarea>
+        <textarea style="white-space: pre-line" class="form-control" name="body" id="body" rows="10" placeholder="Body"><?php echo $blogPart[0]["Body"]; ?></textarea>
       </div>
       <input type="submit" class="btn btn-primary" value="Save"/>
     </form>

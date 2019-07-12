@@ -36,9 +36,26 @@
       <?php 
       include 'main.php';
       $blogPosts = getBlogPosts();
+      if($blogPosts == 0){
+        echo "
+          <div> 
+            <h4> There are no posts yet</h4> 
+          </div> ";
+      }else{
       $search = empty($_POST['searchtext']) ? -1 : $_POST['searchtext'];
       foreach ($blogPosts as $blogPart){
-        if (strpos($blogPart["Title"],$search) !==false || strpos($blogPart["PreviewText"],$search) !==false || strpos($blogPart["Author"],$search) !==false || strpos($blogPart["Body"],$search) !==false){
+        if($search==-1){
+          
+              echo "
+              <div> 
+                <h4>" .$blogPart["Title"]. "</h4> 
+                <p style='white-space: pre-line'>" .$blogPart["PreviewText"]. "</p> 
+              </div> 
+              <hr> 
+              <a href='./show2.php?id=$blogPart[0]' class='btn btn-primary'>Read More</a>";
+            
+           
+      }elseif(strpos($blogPart["Title"],$search) !==false || strpos($blogPart["PreviewText"],$search) !==false || strpos($blogPart["Author"],$search) !==false || strpos($blogPart["Body"],$search) !==false){
             echo "
           <div> 
             <h4>" .$blogPart["Title"]. "</h4> 
@@ -47,16 +64,6 @@
           <hr> 
           <a href='./show2.php?id=$blogPart[0]' class='btn btn-primary'>Read More</a>";
         }
-        if($search==-1){
-            foreach ($blogPosts as $blogPart) {
-                echo "
-                <div> 
-                  <h4>" .$blogPart["Title"]. "</h4> 
-                  <p style='white-space: pre-line'>" .$blogPart["PreviewText"]. "</p> 
-                </div> 
-                <hr> 
-                <a href='./show2.php?id=$blogPart[0]' class='btn btn-primary'>Read More</a>";
-              }
              
         }
       
