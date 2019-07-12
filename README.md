@@ -12,7 +12,9 @@ MySQL Database Setup
 
 2 - Once the MySQL Server has started press on the admin button to go to phpmyadmin window. This is where we will set-up the MySQL database for our dev challenge blog site
 
-3 - Once on the phpmyadmin page, click on the import button at the top, then select choose file and the file you will choose is called devchallenge.sql in this Github Repository
+3 - Once on the phpmyadmin page create a new database called devchallenge the code is setup with this database name
+
+4 - Once you're done creating the database, click on the import button at the top, then select choose file and the file you will choose is called devchallenge.sql in this Github Repository
 
 5 - Make sure to select these on the import page
 -- Check box the Allow the interruption of an import in case the script detects it is close to the PHP timeout limit
@@ -21,7 +23,7 @@ MySQL Database Setup
 -- Select SQL Compatability mode is none
 -- Check box the Do not use AUTO_INCREMENT for zero values
 
-4 - Now you can press GO at the bottom and if all goes well it created the tables and columns for devchallenge blog site.
+6 - Now you can press GO at the bottom and if all goes well it created the tables and columns for devchallenge blog site.
 
 ----------------
 PHP Server Setup
@@ -33,7 +35,7 @@ PHP Server Setup
 --------------------
 Opening the Blogsite
 --------------------
-1 - Now open up Google Chrome browser and go to http://localhost/devchallenge and you should see a page with a directory this was intentional as a debugging method. Now Click on the myhome.php file and the website will open for you and you already have some premade blog posts from our earlier MySQL Import.
+1 - Now open up Google Chrome browser and go to http://localhost/devchallenge and you should see a page with a directory this was intentional as a debugging method. Now Click on the myhome.php file and the website will open for you and you start with no blog posts so go ahead and make some for yourself and try out the features :).
 
 
 Ruby on Rails Developer challenge - OSG
